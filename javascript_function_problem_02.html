@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+
+var A = new Array(10,8);
+var B = new Array(1,2);
+var C = new Array(9,5);
+
+function sum(array){
+	var result = ""
+	for(var i=0; i<array[0]+array[1]; i++)
+		result += "*";
+	for(i=0; i<20-array[0]-array[1]; i++)
+		result += "_";
+	return result;
+}
+function mid(array){
+	var result = "";
+	for(var i=0; i<array; i++)
+		result += "*";
+	for(i=0; i<10-array; i++)
+		result += "_";
+	return result;
+}
+function end(array){
+	var result = "";
+	for(var i=0; i<array; i++)
+		result += "*";
+	for(i=0; i<10-array; i++)
+		result += "_";
+	return result;
+}
+console.log("A : " + mid(A[0]) + " + " + end(A[1]) + " = " + sum(A));
+console.log("B : " + mid(B[0]) + " + " + end(B[1]) + " = " + sum(B));
+console.log("C : " + mid(C[0]) + " + " + end(C[1]) + " = " + sum(C));
+
+    </script>
+</head>
+<body>
+</body>
+</html>
